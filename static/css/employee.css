@@ -1,0 +1,33 @@
+.box2{
+width: 100%;
+
+}  
+.box{
+position: relative;
+width: 200px;
+top: -60px;
+left: -430px;
+
+}
+.table{
+position: relative;
+height:90px;
+width: 60%;
+bottom: 450px;
+left: 100px;
+}
+.container{
+position: relative;
+height: 70px;
+width: 70%;
+top: 10px;
+left: 100px;
+}
+
+th{
+    height: 50px;
+}
+
+.container3{
+width: 10%;
+}

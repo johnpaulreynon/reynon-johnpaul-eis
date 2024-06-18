@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='Bulma/bulma.css') }}">
+  <link rel="stylesheet" href="static/css/employee.css">
+</head>
+
+<body>
+  <div class="box1 has-background-danger has-text-white-bis  is-family-monospace is-size-1 has-text-centered ">
+        INFORMATION OF EMPLOYEE'S</div>
+  <center>
+    <div class="box2">
+
+      <div class=" box2 grid has-background-warning">
+        <table class="table is-bordered">
+          <tbody>
+
+            <tr>
+              <th class="is-link">Employee's</th>
+              <th class="is-link">Last Name</th>
+              <th class="is-link">First Name</th>
+              <th class="is-link">Sex</th>
+            </tr>
+            
+            {% for employee in employees %}
+            <tr>
+              <td>{{ employee[0] }}</td>
+              <td>{{ employee[1] }}</td>
+              <td>{{ employee[2] }}</td>
+              <td>{{ employee[3] }}</td>
+              <td>{{ employee[4] }}</td>
+            </tr>
+          {% endfor %}
+  </center>
+
+  <body>
+   <div class="container  has-background-warninghas-text-white-bis is-family-monospace is-size-1 has-text-centered">
+              LISTED EMPLOYEE</div>
+</body>
+
+  <div class="fixed">
+    <div class="box has-background-danger has-text-white-bis has-text-fixed">List of Employee</div>
+    <div class="box has-background-danger has-text-white-bis">Personal Info</div>
+    <div class="box has-background-danger has-text-white-bis">Education Info</div>
+    <div class="box has-background-danger has-text-white-bis">Work Exp</div>
+    <div class="box has-background-danger has-text-white-bis">Trainings</div>
+    <div class=" has-background-dark has-text-white-bis">Log out</div>
+  </div>
+  
+  
+  </div>
+   
+
+
+  </div>
+  </div>
+</tbody>
+</table>
+
+
+</body>
+
+</html>
