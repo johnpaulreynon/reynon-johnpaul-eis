@@ -31,3 +31,9 @@ th{
 .container3{
 width: 10%;
 }
+
+.add-button{
+    position: relative;
+    left: 403px;
+    top: 13px;
+}

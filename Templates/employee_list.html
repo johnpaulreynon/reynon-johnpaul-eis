@@ -14,6 +14,10 @@
   <div class="box1 has-background-danger has-text-white-bis  is-family-monospace is-size-1 has-text-centered ">
         INFORMATION OF EMPLOYEE'S</div>
   <center>
+
+    {% if message !=  "" %}
+    <div class="has-bg-danger messagebox">{{ message}}</div>
+      {% endif %}
     <div class="box2">
 
       <div class=" box2 grid has-background-warning">
@@ -24,7 +28,8 @@
               <th class="is-link">Employee's</th>
               <th class="is-link">Last Name</th>
               <th class="is-link">First Name</th>
-              <th class="is-link">Sex</th>
+              <th class="is-link">Middle Name</th>
+              <th class="has-text-centered is-link">Actions</th>
             </tr>
             
             {% for employee in employees %}
@@ -33,7 +38,10 @@
               <td>{{ employee[1] }}</td>
               <td>{{ employee[2] }}</td>
               <td>{{ employee[3] }}</td>
-              <td>{{ employee[4] }}</td>
+              <td class="has-text-centered">
+                <a href="{{ url_for('update_employee', emp_id=employee[0]) }}" class="update_button button is-warning is-small">Update</a>
+                <a href="{{ url_for('delete_employee', emp_id=employee[0]) }}" class="delete_button button is-danger is-small">Delete</a>
+            </td>
             </tr>
           {% endfor %}
   </center>
@@ -42,6 +50,10 @@
    <div class="container  has-background-warninghas-text-white-bis is-family-monospace is-size-1 has-text-centered">
               LISTED EMPLOYEE</div>
 </body>
+
+<div class="add-button">
+  <a href="{{ url_for('add_employees') }}" class="button is-primary">Add Employee</a>
+</div>
 
   <div class="fixed">
     <div class="box has-background-danger has-text-white-bis has-text-fixed">List of Employee</div>

@@ -3,21 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Bulma/bulma.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
-    <link rel="stylesheet" href="bulma/bulma.css">
+    <title>Flask App</title>
+    <style>
+        .box{
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
+
 <body>
+    <form class ="box has-background-link-dodge" action="check-user" method="POST">
+    <center>
+   
+        <h1 class="title has-has-text-danger-light" >Log In Your Account Here</h1>
+        
+        
+        <div class="field">
+        <label class="has-text-dark">USERNAME:</label> 
+        <div class=" control"> 
+        <input class="input has has-background-warning " name="username" type="username" placeholder="" />
+        
+        </div>
+        
+        </div>
+        
+        <div class="field">
+        
+        <label1 class="has-text-dark ">PASSWORD:</label>
+        
+        <div class="control">
+        
+        <input class="input has-background-warning" name ="password" type= "password" placeholder="" />
+        
+        </div>
+        
+        </div>
 
-    <div class="container">
-        <h1 class="has-text-primary is-size-1">Hello Bulma!</h1>
-    </div>
-    
-<div class="container is-widescreen"></div>
-
-
-
-
-    
+        <button type= "submit" class="button has-text-white has-background-dark" >LOGIN</button>
+        </form>
+        </center>
 </body>
+
 </html>
